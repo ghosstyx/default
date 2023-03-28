@@ -17,7 +17,7 @@ function CreateRoute() {
       .post("http://localhost:3000/games/", {
         title: titleInp,
         description: descInp,
-        "release-date": rdInp,
+        releaseDate: rdInp,
         imageURL: imageInp,
         developer: devInp,
       })
@@ -35,45 +35,47 @@ function CreateRoute() {
         <Nav />
       </div>
       <div className="max-w-6xl mx-auto shadow-lg rounded p-10">
-        <h1>Yangi oyin yaratish</h1>
+        <h1 className="text-white text-center text-[25px]">
+          Create The Game :
+        </h1>
         <form onSubmit={onCreate} className="flex flex-col space-y-4 p-10">
           <input
             value={titleInp}
             onChange={(e) => setTitleInp(e.target.value)}
-            className="border p-2"
+            className="border-[2px] bg-slate-600 text-gray-300 p-2"
             type="text"
             placeholder="title"
           />
           <input
             value={descInp}
             onChange={(e) => setDescInp(e.target.value)}
-            className="border p-2"
+            className="border-[2px] bg-slate-600 text-gray-300 p-2"
             type="text"
             placeholder="description"
           />
           <input
             value={rdInp}
             onChange={(e) => setRdInp(e.target.value)}
-            className="border p-2"
             type="text"
-            placeholder="release-date"
+            className="border-[2px] bg-slate-600 text-gray-300 p-2"
+            placeholder="releaseDate"
           />
           <input
             value={imageInp}
             onChange={(e) => setImageInp(e.target.value)}
-            className="border p-2"
             type="text"
+            className="border-[2px] bg-slate-600 text-gray-300 p-2"
             placeholder="imageURL"
           />
           <input
             value={devInp}
             onChange={(e) => setDevInp(e.target.value)}
-            className="border p-2"
             type="text"
+            className="border-[2px] bg-slate-600 text-gray-300 p-2"
             placeholder="developer"
           />
           <input
-            className="border bg-green-500 p-2"
+            className="border bg-green-600 text-white p-2"
             type="submit"
             value="Yaratish"
           />

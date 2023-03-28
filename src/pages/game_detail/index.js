@@ -48,7 +48,7 @@ function GameDetailRoute() {
 
   return (
     <>
-      <div>
+      <div className="text-white">
         <Nav />
         <div className="flex justify-center">
           <img className="w-[600px]" src={data.imageURL} />

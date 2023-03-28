@@ -16,7 +16,7 @@ function GameEditRoute() {
     axios.get(`http://localhost:3000/games/${gameId}`).then((response) => {
       setTitleInp(response.data.title);
       setDescInp(response.data.description);
-      setRdInp(response.data["release-date"]);
+      setRdInp(response.data.releaseDate);
       setImageInp(response.data.imageURL);
       setImageInp(response.data.developer);
     });
@@ -28,7 +28,7 @@ function GameEditRoute() {
       .put(`http://localhost:3000/games/${gameId}`, {
         title: titleInp,
         description: descInp,
-        "release-date": rdInp,
+        releaseDate: rdInp,
         imageURL: imageInp,
         developer: devInp,
       })
@@ -67,7 +67,7 @@ function GameEditRoute() {
             onChange={(e) => setRdInp(e.target.value)}
             className="border p-2"
             type="text"
-            placeholder="release-date"
+            placeholder="realiseDate"
           />
           <input
             value={imageInp}

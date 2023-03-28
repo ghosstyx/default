@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Nav from "../../components/Nav";
-import CharacterCard from "./characterCard";
+// import CharacterCard from "./characterCard";
 
 function ListRoute() {
   const [data, setData] = useState([]);
